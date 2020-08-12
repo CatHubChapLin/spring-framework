@@ -50,6 +50,8 @@ import org.springframework.lang.Nullable;
  * @since 31.07.2003
  * @see org.springframework.core.io.ResourceLoader
  * @see org.springframework.context.ApplicationContext
+ *
+ * 资源实例解析器 extends 选派解析器
  */
 public class ResourceEntityResolver extends DelegatingEntityResolver {
 

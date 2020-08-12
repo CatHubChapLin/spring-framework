@@ -35,6 +35,8 @@ import org.springframework.util.Assert;
  * @since 2.0
  * @see BeansDtdResolver
  * @see PluggableSchemaResolver
+ *
+ * 选派实例解析器
  */
 public class DelegatingEntityResolver implements EntityResolver {
 

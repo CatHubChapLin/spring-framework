@@ -28,17 +28,23 @@ import org.springframework.lang.Nullable;
  * @author Juergen Hoeller
  * @since 4.3
  * @see DefaultResourceLoader#addProtocolResolver
+ *
+ * 协议解析器
  */
 @FunctionalInterface
 public interface ProtocolResolver {
 
 	/**
+	 * 使用指定的 ResourceLoader ，解析指定的 location 。
+	 * 若成功，则返回对应的 Resource
 	 * Resolve the given location against the given resource loader
 	 * if this implementation's protocol matches.
-	 * @param location the user-specified resource location
-	 * @param resourceLoader the associated resource loader
+	 *
+	 * @param location the user-specified resource location  资源路径
+	 * @param resourceLoader the associated resource loader  指定的加载器
+	 *
 	 * @return a corresponding {@code Resource} handle if the given location
-	 * matches this resolver's protocol, or {@code null} otherwise
+	 * matches this resolver's protocol, or {@code null} otherwise  返回为相应的 Resource
 	 */
 	@Nullable
 	Resource resolve(String location, ResourceLoader resourceLoader);
